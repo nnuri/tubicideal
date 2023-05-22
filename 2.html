@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>2</title>
+
+  
+</head><body style="background-image: url(fondo2.jpg);">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="1" style="vertical-align: top; background-color: rgb(153, 0, 0); width: 484px;"><big><big>BICI
+DE MONTAÑA</big></big><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; width: 1116px;"><big><span style="color: white;">Las bicis de montaña son al mejor opción para
+terrrenos montañosos</span><br style="color: white;">
+      <span style="color: white;">Hay varios tipos:</span><br>
+      </big> <br>
+      <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><big><span style="color: white;">FREERIDE</span></big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+            <a href="Freeride.html"><img style="border: 0px solid ; width: 241px; height: 171px;" alt="freeride" title="freeride" src="2.2.png"></a></td>
+            <td style="vertical-align: top; color: white;">CROSS COUNTRY<br>
+            <a href="crosscountry.html"><img style="border: 0px solid ; width: 242px; height: 161px;" alt="cross country" title="cross country" src="2.3.jpg"></a><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span style="color: white;">ENDURO</span><br>
+            <a href="enduro.html"><img style="border: 0px solid ; width: 268px; height: 180px;" alt="trail" title="trail" src="2.4.jpg"></a><br>
+            </td>
+            <td style="vertical-align: top;"><span style="color: white;">DOWNHILL</span><br>
+            <a href="downhill.html"><img style="border: 0px solid ; width: 299px; height: 168px;" alt="downhill" title="downhill" src="2.5.png"></a><br>
+            <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </td>
+      <td style="vertical-align: top; width: 484px;">
+      <div style="text-align: center;"> </div>
+      <form id="bici-form">
+        <div style="text-align: center;"> <big style="color: white; font-weight: bold;"><big><label for="uso"><br>
+DESCUBRE EL TUYO</label></big></big><br>
+        </div>
+        <big><big><br>
+        </big></big>
+        <div style="text-align: center;"><big><big><label style="color: rgb(255, 102, 102);" for="uso">Uso:</label></big></big>
+        <select id="uso" name="uso">
+        <option value="grava">Grava</option>
+        <option value="sendas">Sendas</option>
+        <option value="montanas">Montañas</option>
+        <option value="piedras">Piedras</option>
+        </select>
+        <br>
+        </div>
+        <br>
+        <div style="text-align: center;"><big><big><label style="color: rgb(255, 102, 102);" for="tendencia">Tendencia:</label></big></big>
+        <select id="tendencia" name="tendencia">
+        <option value="subida">Subida</option>
+        <option value="bajada">Bajada</option>
+        <option value="plano">Plano</option>
+        <option value="todo">Todo</option>
+        </select>
+        <br>
+        </div>
+        <br>
+        <div style="text-align: center;"><button type="submit">Buscar
+mi bici ideal</button> </div>
+      </form>
+      <script>
+const form = document.querySelector('#bici-form');
+form.addEventListener('submit', (event) => {
+event.preventDefault(); // Prevenir que la p&#65533;gina se recargue
+
+const uso = document.querySelector('#uso').value;
+const tendencia = document.querySelector('#tendencia').value;
+
+let url;
+
+if (uso === 'grava') {
+if (tendencia === 'subida') {
+url = 'crosscountry.html';
+} else if (tendencia === 'bajada') {
+url = 'downhill.html';
+} else if (tendencia === 'plano') {
+url = 'freeride.html';
+} else {
+url = 'enduro.html';
+}
+} else if (uso === 'sendas') {
+if (tendencia === 'subida') {
+url = 'crosscountry.html';
+} else if (tendencia === 'bajada') {
+url = 'enduro.html';
+} else if (tendencia === 'plano') {
+url = 'freeride.html';
+} else {
+url = 'downhill.html';
+}
+} else if (uso === 'montanas') {
+if (tendencia === 'subida') {
+url = 'crosscountry.html';
+} else if (tendencia === 'bajada') {
+url = 'downhill.html';
+} else if (tendencia === 'plano') {
+url = 'enduro.html';
+} else {
+url = 'freeride.html';
+}
+} else if (uso === 'piedras') {
+if (tendencia === 'subida') {
+url = 'enduro.html';
+} else if (tendencia === 'bajada') {
+url = 'downhill.html';
+} else if (tendencia === 'plano') {
+url = 'crosscountry.html';
+} else {
+url = 'freeride.html';
+}
+}
+if (url) {
+window.location.href = url;
+}
+});
+      </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+</body></html>

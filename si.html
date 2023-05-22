@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta charset="UTF-8">
+  <title>Bici ideal según tus preferencias</title>
+
+  
+</head><body>
+<form id="bici-form"> <label for="uso">Uso:</label>
+  <select id="uso" name="uso">
+  <option value="grava">Grava</option>
+  <option value="sendas">Sendas</option>
+  <option value="montanas">Montañas</option>
+  <option value="piedras">Piedras</option>
+  </select>
+  <label for="tendencia">Tendencia:</label>
+  <select id="tendencia" name="tendencia">
+  <option value="subida">Subida</option>
+  <option value="bajada">Bajada</option>
+  <option value="plano">Plano</option>
+  <option value="todo">Todo</option>
+  </select>
+  <button type="submit">Buscar mi bici ideal</button> </form>
+
+<script>
+const form = document.querySelector('#bici-form');
+form.addEventListener('submit', (event) =&gt; { event.preventDefault();
+// Prevenir que la página se recargue 
+const uso = document.querySelector('#uso').value; const tendencia =
+document.querySelector('#tendencia').value; let url; if (uso =
+'grava') { if (tendencia = 'subida') { url =
+'https://www.ejemplo.com/bici-para-grava-subida'; } else if (tendencia
+= 'bajada') { url = 'https://www.ejemplo.com/bici-para-grava-bajada';
+} else if (tendencia = 'plano') { url =
+'https://www.ejemplo.com/bici-para-grava-plano'; } else { url =
+'https://www.ejemplo.com/bici-para-grava-todo'; } } else if (uso =
+'sendas') { if (tendencia === 'subida') { url =
+'https://www.ejemplo.com/bici-para-sendas-subida'; } else if (tendencia
+= 'bajada') { url =
+'https://www.ejemplo.com/bici-para-sendas-bajada'; } else if (tendencia
+= 'plano') { url = 'https://www.ejemplo.com/bici-para-sendas-plano';
+} else { url = 'https://www.ejemplo.com/bici-para-sendas-todo'; } }
+else if (uso = 'montanas') { if (tendencia = 'subida') { url =
+'https://www.ejemplo.com/bici-para-montanas-subida'; } else if
+(tendencia = 'bajada') { url =
+'https://www.ejemplo.com/bici-para-montanas-bajada'; } else if
+(tendencia = 'plano') { url =
+'https://www.ejemplo.com/bici-para-montanas-plano'; } else { url =
+'https://www.ejemplo.com } else if (uso = 'piedras') { if (tendencia
+= 'subida') { url =
+'https://www.ejemplo.com/bici-para-piedras-subida'; } else if
+(tendencia = 'bajada') { url =
+'https://www.ejemplo.com/bici-para-piedras-bajada'; } else if
+(tendencia = 'plano') { url =
+'https://www.ejemplo.com/bici-para-piedras-plano'; } else { url =
+'https://www.ejemplo.com/bici-para-piedras-todo'; } }
+window.location.href = url; });
+</script>
+</body></html>
